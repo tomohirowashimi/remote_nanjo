@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=operation
+Comment=operation
+Exec=/home/pi/Documents/operation/operation.sh
+Icon=/home/pi/Documents/board/board.ico
+
+Terminal=false

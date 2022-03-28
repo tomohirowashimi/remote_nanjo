@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>monitor</title>
+        <link rel="stylesheet" href="static/monitor.css">
+    </head>
+    <body>
+        <h2 class="head">{{select_date}} 稼動状況</h2>
+        <p>稼働率：　<span class="rate">{{product_rate}}</span>　％　（※24時間ベース）</p>
+        <p><a href="/">戻る</a></p>
+        <div id="monitor" class="monitor"></div>
+    </body>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script type="text/javascript">
+        var graphs = {{graphJSON | safe}};
+        Plotly.newPlot('monitor', graphs, {});
+    </script>
+</html>
